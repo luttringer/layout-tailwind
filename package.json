@@ -1,0 +1,23 @@
+{
+  "name": "layout-tailwind",
+  "version": "1.0.0",
+  "description": "Tailwind CSS v4 development layout — PostCSS + Terser + Material Symbols",
+  "scripts": {
+    "dev": "concurrently \"postcss src/css/main.css -o dist/css/main.css --watch --map\" \"sirv . --port 3000 --dev\"",
+    "build": "npm run build:css && npm run build:js",
+    "build:css": "cross-env NODE_ENV=production postcss src/css/main.css -o dist/css/main.min.css",
+    "build:js": "node scripts/build-js.js"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.0",
+    "concurrently": "^9.0.0",
+    "cross-env": "^7.0.0",
+    "cssnano": "^7.0.0",
+    "postcss": "^8.0.0",
+    "postcss-cli": "^11.0.0",
+    "postcss-nesting": "^13.0.0",
+    "sirv-cli": "^3.0.0",
+    "tailwindcss": "^4.0.0",
+    "terser": "^5.0.0"
+  }
+}

@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+/* ─────────────────────────────────────────────
+   Design tokens — editá acá tus variables globales.
+   Tailwind v4 expone estas como clases utilitarias
+   y como variables CSS nativas (var(--font-sans), etc.)
+───────────────────────────────────────────── */
+@theme {
+  /* Tipografía */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Paleta de marca — ajustá según el proyecto */
+  --color-brand-50:  oklch(0.97 0.01 250);
+  --color-brand-100: oklch(0.93 0.04 250);
+  --color-brand-300: oklch(0.75 0.14 250);
+  --color-brand-500: oklch(0.55 0.22 250);
+  --color-brand-700: oklch(0.40 0.18 250);
+  --color-brand-900: oklch(0.25 0.10 250);
+
+  /* Superficie */
+  --color-surface:      oklch(0.99 0 0);
+  --color-surface-dim:  oklch(0.94 0 0);
+  --color-surface-dark: oklch(0.10 0 0);
+}
+
+/* ─────────────────────────────────────────────
+   Estilos base (CSS nesting via postcss-nesting)
+───────────────────────────────────────────── */
+body
+{
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Ejemplo de nesting W3C */
+.card
+{
+  & .card-title
+  {
+    font-weight: 600;
+  }
+
+  &:hover
+  {
+    opacity: 0.9;
+  }
+}

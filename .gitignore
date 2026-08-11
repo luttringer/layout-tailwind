@@ -1,0 +1,8 @@
+node_modules/
+dist/css/main.css
+dist/css/main.css.map
+*.log
+.DS_Store
+Thumbs.db
+.claudeignore
+CLAUDE.md
